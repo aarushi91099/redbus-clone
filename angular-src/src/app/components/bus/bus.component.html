@@ -1,0 +1,38 @@
+<body>
+<br><br>
+  <h1 style="text-align: center;">Welcome</h1>
+  <h2 class="page-header" style="text-align: center;">Bus Details</h2>
+  <!-- {{bus | json}} -->
+  <div class="a">
+  <ng-container *ngIf="bus != undefined && bus != null">
+  <div *ngFor="let i of bus.bus">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              From: {{i.from}}<br>
+              To: {{i.to}}<br>
+            </div>
+            <div class="col-md-6">
+              Timing: {{i.timing}}<br>
+              Seats: {{i.seats}}
+            </div>  
+          </div>
+        <form  class="form-inline" (submit)="book()">
+          <input type="submit" value="Book">
+        </form>
+        </div>
+      </div>
+  </div>
+  </ng-container>
+
+</div>
+</body>
+
+<!-- <ul class="list-group">
+    <li class="list-group-item">From: {{i.from}}</li>
+    <li class="list-group-item">To: {{i.to}}</li>
+    <li class="list-group-item">Timing: {{i.timing}}</li>
+    <li class="list-group-item">Seats: {{i.seats}}</li>
+    
+  </ul> -->

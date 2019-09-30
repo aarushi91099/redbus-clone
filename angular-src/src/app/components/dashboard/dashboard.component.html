@@ -1,0 +1,42 @@
+<br><br>
+<h2 class="page-header" style="text-align: center;">Welcome</h2>
+<div class="b">
+    <!-- {{seat | json}} -->
+    <!-- {{bus | json}} -->
+    <p>Your Booking:</p>
+    <b>Recent</b>
+    <div class="card">
+          <div class="card-body">
+        <ng-container *ngIf="bus != undefined && bus != null">
+          <div *ngFor="let i of bus.bus">
+            From: {{i.from}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To: {{i.to}}<br>
+            Timing: {{i.timing}}
+          </div>
+        </ng-container>   
+        <ng-container *ngIf="seat != undefined && seat != null">
+          <div *ngFor="let i of seat.index">
+            Seat: {{i}}
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <b>Old Booking</b>
+    <div class="card">
+        <div class="card-body">
+          From: Kanpur &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To: Jaipur<br>
+          Timing: 9:00 PM<br>
+          Seats: 3A, 3B, 3C
+        </div>
+      </div>
+      <div class="card">
+          <div class="card-body">
+            From: Ahemdabad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To: Banglore<br>
+            Timing: 3:00 AM<br>
+            Seats: 1A
+          </div>
+      </div>
+</div>
+
+<!-- <ul class="list-group">
+      <li class="list-group-item">Seat: {{i}}</li>
+    </ul> -->

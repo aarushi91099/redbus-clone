@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Lets Ride</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button> 
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li  [routerLinkActive]="['active']">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <a *ngIf="authService.loggedin()" [routerLinkActive]="['active']" class="text-white-50" href="/dashboard">Dashboard</a>&nbsp;&nbsp;
+      <a *ngIf="authService.loggedin()" [routerLinkActive]="['active']" class="text-white-50" href="/profile">Profile</a>&nbsp;&nbsp;
+      <a *ngIf="authService.loggedin()" class="text-white-50" (click)="onLogoutClick()" href="#">Logout</a>&nbsp;&nbsp;
+      <a *ngIf="!authService.loggedin()" [routerLinkActive]="['active']" class="text-white-50 " href="/login">Login</a>&nbsp;&nbsp;
+      <a *ngIf="!authService.loggedin()" [routerLinkActive]="['active']" class="text-white-50" href="/register">Sign up</a>&nbsp;&nbsp;
+      
+      <form class="form-inline my-2 my-lg-0">
+      </form>
+    </div>
+  </nav>

@@ -1,0 +1,26 @@
+<div class="row mt-5">
+  <div class="col-md-4 m-auto">
+    <div class="card card-body">
+        <h2 class="page-header">Register</h2>
+        <form  (submit)="onSubmit()">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" [(ngModel)]="name" name="name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" [(ngModel)]="username" name="username" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" [(ngModel)]="email" name="email" [pattern]="reg" class="form-control" >
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" [(ngModel)]="password" name="password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+        </form>
+    </div>
+  </div>
+</div>  
